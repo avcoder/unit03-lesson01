@@ -76,6 +76,7 @@ transition: slide-left
 Node is just ONE of many ways to achieve results.  We'll use node for how popular it is.
 
 <!--
+- console.log(global)
 -->
 
 ---
@@ -188,11 +189,18 @@ transition: slide-left
 (30 mins) 
 
 - Encapsulation: recall how objects can encapsulate data and functions
-- Modules in node.js via `require()` or `import`
-- `node_modules` folder
 - What is `npm`? 
    - [see npmjs.com](npmjs.com)
    - See [npm left-pad incident that broke the internet](https://en.wikipedia.org/wiki/Npm_left-pad_incident)
+- How to `npm i`, `node_modules` folder, `package.lock` file, `npm uninstall`
+- How to import vs export (commonjs uses require; ES6 uses import)
+
+
+<!--
+- Browser: <script type="module" src="./module.js"></script>
+- Node: import { sayHello } from './module.js'; sayHello() 
+- package.json: "type": "module",
+-->
 
 ---
 transition: slide-left
