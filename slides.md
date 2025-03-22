@@ -125,7 +125,7 @@ transition: slide-left
 ---
 layout: image-right
 transition: slide-left
-image: /assets/scott.png
+image: /assets/dahl.png
 backgroundSize: 500px 160px
 class: text-left
 ---
@@ -134,7 +134,7 @@ class: text-left
 
 🍦 Cool Tips, Trends and Resources:
 
-- ▶️ [Chrome for Devs Channel](https://www.youtube.com/@ChromeDevs/videos)
+- ▶️ [NVM Install Guide](https://www.freecodecamp.org/news/node-version-manager-nvm-install-guide/)
 
 <br>
 <hr>
