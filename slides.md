@@ -134,7 +134,9 @@ class: text-left
 
 🍦 Cool Tips, Trends and Resources:
 
-- ▶️ [NVM Install Guide](https://www.freecodecamp.org/news/node-version-manager-nvm-install-guide/)
+- 📓 [NVM Install Guide](https://www.freecodecamp.org/news/node-version-manager-nvm-install-guide/)
+- ▶️ [Node.js Documentary]
+- ▶️ [10 Things I regret about node.js](https://www.youtube.com/watch?v=M3BM9TB-8yA)
 
 <br>
 <hr>
