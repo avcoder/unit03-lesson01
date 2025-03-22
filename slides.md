@@ -89,7 +89,7 @@ transition: slide-left
 - `ls` `cd` `pwd` `mkdir` `cp` `mv` `rm` `touch` `man` `cat` `more` `echo` `grep`
 - flags, bash
 - operators: `>` `|` `*` `&&`
-- Can open applications like VS Code via `code .`
+- Can open applications like VS Code via `vi` or `vim`, `nano`, `code .`
 - Challenge: Using only terminal commands:
    - create a new desktop folder called `test`
    - within that folder create a new file called `test.txt` that has the sentence `"Hello World"`
@@ -115,6 +115,7 @@ transition: slide-left
    - `node -v` `npm -v`
    - [SEMVER](https://devhints.io/semver)
 - Set up environment in VS Code, Prettier, ES Lint, npm intellisense, path intellisense, GitLens, Bracket Pair Colorizer
+- Browser > Network tab > Disable cache
 - Create a Node.js project
 
 <!--
@@ -155,11 +156,26 @@ transition: slide-left
 
 - Create a basic Node.js script
 - Challenge: console.log('Hello World') to the terminal
-- Challenge: Server respond with 'Hello World' (test response with browser)
-- Challenge: Server respond with `<h1>Hello World</h1>`
-- Challenge: Server respond with JSON 
+- Challenge: Server respond with `<h1>Hello World</h1>`/JSON (test response with browser)
+
+```js
+import http from 'http';
+  
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/html');
+  res.write('<h1>hello world</h1>');
+  res.end();
+});
+
+server.listen(3030)
+```
 
 <!--
+- res.statusCode = 201;
+- res.setHeader('Content-Type', 'application/json');
+- res.write(JSON.stringify(person));
+- Inspect Network tab
 -->
 
 ---
