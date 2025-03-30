@@ -35,36 +35,8 @@ TODO: fill in anchor href above to point to github repo for these slides
 transition: slide-left
 ---
 
-# Recap
-(10 min) 
-
-- Refresher about JS syntax, variables, objects, console
-- Examine Network tab/Postman for network requests 
-   - see Header, Payload, Response
-   - What kind of responses do we get?  
-- [Network Model](https://www.9tut.com/images/ccna_self_study/TCP_UDP/TCP_UDP.jpg)
-
-<style>
-h1 {
-  background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-}
-</style>
-
-<!--
--->
-
----
-transition: slide-left
----
-
 # Intro to Node.js
-(20 min) What is the point of Node.js?
+(10 min) What is the point of Node.js?
 
 - Node.js is a JS runtime, but does not have access to the browser, window, DOM or anything client-facing
 - Node.js is on the server, has access to file system, networking (think terminal command environment)
@@ -76,31 +48,6 @@ transition: slide-left
 Node is just ONE of many ways to achieve results.  We'll use node for how popular it is.
 
 <!--
-- console.log(global)
--->
-
----
-transition: slide-left
----
-
-# Command Line Basics
-(30 min) Utilize the command line
-
-- What is the command line?  Why is it important to learn how to use it?
-- `ls` `cd` `pwd` `mkdir` `cp` `mv` `rm` `touch` `man` `cat` `more` `echo` `grep`
-- flags, bash
-- operators: `>` `|` `*` `&&`
-- Can open applications like VS Code via `vi` or `vim`, `nano`, `code .`
-- Challenge: Using only terminal commands:
-   - create a new desktop folder called `test`
-   - within that folder create a new file called `test.txt` that has the sentence `"Hello World"`
-   - create another new file called `README.md` that has a heading and a sentence with a link to google
-- `ping` `traceroute` `curl` `wget` `telnet`
-
-<!--
-- Show telnet connecting to Live Server
-- GET / HTTP/1.1 OR GET /data.js HTTP/1.1
-- host:localhost
 -->
 
 ---
@@ -120,34 +67,7 @@ transition: slide-left
 - Create a Node.js project
 
 <!--
--->
-
-
----
-layout: image-right
-transition: slide-left
-image: /assets/dahl.png
-backgroundSize: 500px 160px
-class: text-left
----
-
-# 10 minute break
-
-🍦 Cool Tips, Trends and Resources:
-
-- 📓 [NVM Install Guide](https://www.freecodecamp.org/news/node-version-manager-nvm-install-guide/)
-- ▶️ [Node.js Documentary]
-- ▶️ [10 Things I regret about node.js](https://www.youtube.com/watch?v=M3BM9TB-8yA)
-
-<br>
-<hr>
-<br>
-
-- 🧪 [Enter anonymous lab questions](https://docs.google.com/forms/d/e/1FAIpQLSevvGARdHQikso-uLqFCO481MABKE5HofuSrlzEPMNQ2ZLykw/viewform?usp=dialog)
-- ℹ️ [Course feedback survey](https://circuitstream.typeform.com/to/ZoyYk7px#course_id=SoftwareAN&instructor=9514)
-
-<!-- 
-- take attendance
+- console.log(global)
 -->
 
 ---
@@ -185,8 +105,100 @@ server.listen(3030)
 transition: slide-left
 ---
 
+# Network and HTTP basics
+(30 min) 
+
+- [Network Model](https://www.9tut.com/images/ccna_self_study/TCP_UDP/TCP_UDP.jpg)
+- HTTP: Hypertext Transfer Protocol 
+   - set of rules servers use to transfer web docs
+   - stateless protocol: each request is unique and has no memory of previous requests
+   - to fix: http allows sessions / cookies (thus http while stateless is not sessionless)
+- HTTP Headers (metadata) are sent with every request/response and sometimes includes:
+   - what type of client sent the request
+   - server config
+   - time/date of response
+   - how long should content be stored on client
+   - what format data is in
+   - cookies used to track sessions
+- HTTP works on request/response pairs where every request is initiated with an HTTP methods:
+   - REQUEST initiated with: `GET` `POST` `PUT` `DELETE` `CONNECT` etc.
+   - RESPONSE returns status code: 200, 304, 404, 500 etc. along with data
+- Terminology:
+   - Browser: app used to access/navigate HTML docs
+   - User Agent: app acting on behalf of user (ex: browser, middleware, Google service)
+   - TCP: Transmission Control Protocol
+   - IP: Internet Protocol
+   - URL : Universal Resource Locator
+   - DNS: URLs are human readable addresses stored in Domain Name Servers
+   - Server: computer on internet that usually runs data storage / web app
+   - Proxy: s/w or h/w acting as middle person between client/server (hide IP address)
+   - Cache: way to store data on client/server to speed up perf (ex: CSS may be cached)
+   - Cookie: small string of data passed back/forth between client/server to create stateful session
+- URL structure
+- Query string parameters
+- Request headers
+- Cookies
+
+<!--
+-->
+
+---
+layout: image-right
+transition: slide-left
+image: /assets/dahl.png
+backgroundSize: 500px 160px
+class: text-left
+---
+
+# 10 minute break
+
+🍦 Cool Tips, Trends and Resources:
+
+- 📓 [NVM Install Guide](https://www.freecodecamp.org/news/node-version-manager-nvm-install-guide/)
+- ▶️ [Node.js Documentary]
+- ▶️ [10 Things I regret about node.js](https://www.youtube.com/watch?v=M3BM9TB-8yA)
+
+<br>
+<hr>
+<br>
+
+- 🧪 [Enter anonymous lab questions](https://docs.google.com/forms/d/e/1FAIpQLSevvGARdHQikso-uLqFCO481MABKE5HofuSrlzEPMNQ2ZLykw/viewform?usp=dialog)
+- ℹ️ [Course feedback survey](https://circuitstream.typeform.com/to/ZoyYk7px#course_id=SoftwareAN&instructor=9514)
+
+<!-- 
+- take attendance
+-->
+
+---
+transition: slide-left
+---
+
+# Command Line Basics
+(30 min) Utilize the command line
+
+- What is the command line?  Why is it important to learn how to use it?
+- `ls` `cd` `pwd` `mkdir` `cp` `mv` `rm` `touch` `man` `cat` `more` `echo` `grep`
+- flags, bash
+- operators: `>` `|` `*` `&&`
+- Can open applications like VS Code via `vi` or `vim`, `nano`, `code .`
+- Challenge: Using only terminal commands:
+   - create a new desktop folder called `test`
+   - within that folder create a new file called `test.txt` that has the sentence `"Hello World"`
+   - create another new file called `README.md` that has a heading and a sentence with a link to google
+- `ping` `traceroute` `curl` `wget` `telnet`
+
+<!--
+- Show telnet connecting to Live Server
+- GET / HTTP/1.1 OR GET /data.js HTTP/1.1
+- host:localhost
+-->
+
+---
+transition: slide-left
+---
+
 # Modules & npm
-(30 mins) 
+(20 mins) 
 
 - Encapsulation: recall how objects can encapsulate data and functions
 - What is `npm`? 
@@ -207,12 +219,11 @@ transition: slide-left
 ---
 
 # Github
-(10 mins) What is GitHub?
+(10 mins) Practice pushing commit to GH repo
 
 - Git is not GitHub
 - Why is GitHub important?
 - Other options: GitLab, BitBucket
-- Did you know?  You can use GitHub as your public-facing portfolio?
 - Challenge: commit your code, create Github repo and push your commit
 
 ---
