@@ -173,6 +173,18 @@ class: text-left
 transition: slide-left
 ---
 
+# Github
+(10 mins) Practice pushing commit to GH repo
+
+- Git is not GitHub
+- Why is GitHub important?
+- Other options: GitLab, BitBucket
+- Challenge: commit your code, create Github repo and push your commit
+
+---
+transition: slide-left
+---
+
 # Command Line Basics
 (30 min) Utilize the command line
 
@@ -213,18 +225,6 @@ transition: slide-left
 - Node: import { sayHello } from './module.js'; sayHello() 
 - package.json: "type": "module",
 -->
-
----
-transition: slide-left
----
-
-# Github
-(10 mins) Practice pushing commit to GH repo
-
-- Git is not GitHub
-- Why is GitHub important?
-- Other options: GitLab, BitBucket
-- Challenge: commit your code, create Github repo and push your commit
 
 ---
 transition: slide-left
