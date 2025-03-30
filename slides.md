@@ -36,7 +36,7 @@ transition: slide-left
 ---
 
 # Intro to Node.js
-(10 min) What is the point of Node.js?
+(5 min) What is the point of Node.js?
 
 - Node.js is a JS runtime, but does not have access to the browser, window, DOM or anything client-facing
 - Node.js is on the server, has access to file system, networking (think terminal command environment)
@@ -121,8 +121,17 @@ transition: slide-left
    - what format data is in
    - cookies used to track sessions
 - HTTP works on request/response pairs where every request is initiated with an HTTP methods:
-   - REQUEST initiated with: `GET` `POST` `PUT` `DELETE` `CONNECT` etc.
-   - RESPONSE returns status code: 200, 304, 404, 500 etc. along with data
+   - REQUEST initiated with: 
+      - `GET` - get the specified resource if available; may need auth header
+      - `POST` - create a new resource and add it to collection
+      - `DELETE` 
+   - RESPONSE returns status code: 
+      - 200 OK
+      - 304 cached
+      - 404 File not found
+      - 405 Method Not Allowed
+      - 403 Forbidden
+      - 500 server error
 - Terminology:
    - Browser: app used to access/navigate HTML docs
    - User Agent: app acting on behalf of user (ex: browser, middleware, Google service)
@@ -135,6 +144,12 @@ transition: slide-left
    - Cache: way to store data on client/server to speed up perf (ex: CSS may be cached)
    - Cookie: small string of data passed back/forth between client/server to create stateful session
 - URL structure
+   - Protocol vs URN (Universal Resource Name)
+   - URN
+      - Host
+      - port (usually hidden)
+      - resource path (usually file location within server; looks for index.html by default)
+      - URL query (`?` separates path from query; uses `&` to connect multiple key/value pairs)
 - Query string parameters
 - Request headers
 - Cookies
