@@ -55,16 +55,15 @@ transition: slide-left
 ---
 
 # Installing Node.js and setting up a project
-(20 mins)  Create a new Node.js project
+(10 mins)  Create a new Node.js project
 
 - Download/Install [Node.js](https://nodejs.org/en/download) (i.e. or )
    - note: can also install via [nvm](https://www.freecodecamp.org/news/node-version-manager-nvm-install-guide/)
    - LTS = Long Term Support (even numbers 👍; odd numbers 👎)
    - `node -v` `npm -v`
    - [SEMVER](https://devhints.io/semver)
-- Set up environment in VS Code, Prettier, ES Lint, npm intellisense, path intellisense, GitLens, Bracket Pair Colorizer
+- Set up environment in VS Code, Prettier, ES Lint, npm intellisense, path intellisense, Git Graph, Bracket Pair Colorizer, REST Client
 - Browser > Network tab > Disable cache
-- Create a Node.js project
 
 <!--
 - console.log(global)
@@ -75,11 +74,10 @@ transition: slide-left
 ---
 
 # Hello World
-(20 mins)  Create a "Hello World" response
+(30 mins)  Create a "Hello World" response
 
 - Create a basic Node.js script
-- Challenge: console.log('Hello World') to the terminal
-- Challenge: Server respond with `<h1>Hello World</h1>`/JSON (test response with browser)
+   - `npm init`
 
 ```js
 import http from 'http';
@@ -93,6 +91,7 @@ const server = http.createServer((req, res) => {
 
 server.listen(3030)
 ```
+- Challenge: A client wants a server that greets users differently based on their request type: "Hello" for `GET`, "Welcome" for `POST`, and "Goodbye" for `DELETE`.  Create a server that checks the HTTP method via `req.method` and respond accordingly on the /greet endpoint (ex: localhost:3030/greet)
 
 <!--
 - res.statusCode = 201;
@@ -106,7 +105,7 @@ transition: slide-left
 ---
 
 # Network and HTTP basics
-(30 min) 
+(10 min) 
 
 - [Network Model](https://www.9tut.com/images/ccna_self_study/TCP_UDP/TCP_UDP.jpg)
 - HTTP: Hypertext Transfer Protocol 
@@ -115,44 +114,45 @@ transition: slide-left
    - to fix: http allows sessions / cookies (thus http while stateless is not sessionless)
 - HTTP Headers (metadata) are sent with every request/response and sometimes includes:
    - what type of client sent the request
-   - server config
-   - time/date of response
    - how long should content be stored on client
    - what format data is in
-   - cookies used to track sessions
-- HTTP works on request/response pairs where every request is initiated with an HTTP methods:
-   - REQUEST initiated with: 
-      - `GET` - get the specified resource if available; may need auth header
-      - `POST` - create a new resource and add it to collection
-      - `DELETE` 
-   - RESPONSE returns [status code](https://www.restapitutorial.com/httpstatuscodes): 
-      - 200 OK
-      - 404 File not found
-      - 500 server error
-- Terminology:
-   - Browser: app used to access/navigate HTML docs
-   - User Agent: app acting on behalf of user (ex: browser, middleware, Google service)
-   - TCP: Transmission Control Protocol
-   - IP: Internet Protocol
-   - URL : Universal Resource Locator
-   - DNS: URLs are human readable addresses stored in Domain Name Servers
-   - Server: computer on internet that usually runs data storage / web app
-   - Proxy: s/w or h/w acting as middle person between client/server (hide IP address)
-   - Cache: way to store data on client/server to speed up perf (ex: CSS may be cached)
-   - Cookie: small string of data passed back/forth between client/server to create stateful session
-- URL structure
-   - Protocol vs URN (Universal Resource Name)
-   - URN
-      - Host
-      - port (usually hidden)
-      - resource path (usually file location within server; looks for index.html by default)
-      - URL query (`?` separates path from query; uses `&` to connect multiple key/value pairs)
-- Query string parameters
-- Request headers
-- Cookies
+- HTTP works on request/response pairs where every request is initiated with an HTTP method and a RESPONSE returns [status code](https://www.restapitutorial.com/httpstatuscodes):
 
 <!--
 -->
+
+
+---
+transition: slide-left
+---
+
+# Terminology
+(10 min)
+
+   - User Agent: app acting on behalf of user (ex: browser, middleware, Google service)
+   - TCP: Transmission Control Protocol
+   - IP: Internet Protocol
+   - DNS: URLs are human readable addresses stored in Domain Name Servers
+   - Server: computer on internet that usually runs data storage / web app
+   - Cache: way to store data on client/server to speed up perf (ex: CSS may be cached)
+   - Cookie: small string of data passed back/forth between client/server to create stateful session
+   
+---
+transition: slide-left
+---
+
+# URL structure
+(5 min)
+
+- Protocol vs URN (Universal Resource Name)
+- URN
+   - Host
+   - port (usually hidden)
+   - resource path (usually file location within server; looks for index.html by default)
+   - URL query (`?` separates path from query; uses `&` to connect multiple key/value pairs)
+- Query string parameters
+
+
 
 ---
 layout: image-right
