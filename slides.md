@@ -57,8 +57,8 @@ transition: slide-left
 # Installing Node.js and setting up a project
 (20 mins)  Create a new Node.js project
 
-- Download/Install Node.js 
-   - note: can also install via `nvm`
+- Download/Install [Node.js](https://nodejs.org/en/download) (i.e. or )
+   - note: can also install via [nvm](https://www.freecodecamp.org/news/node-version-manager-nvm-install-guide/)
    - LTS = Long Term Support (even numbers 👍; odd numbers 👎)
    - `node -v` `npm -v`
    - [SEMVER](https://devhints.io/semver)
@@ -125,12 +125,9 @@ transition: slide-left
       - `GET` - get the specified resource if available; may need auth header
       - `POST` - create a new resource and add it to collection
       - `DELETE` 
-   - RESPONSE returns status code: 
+   - RESPONSE returns [status code](https://www.restapitutorial.com/httpstatuscodes): 
       - 200 OK
-      - 304 cached
       - 404 File not found
-      - 405 Method Not Allowed
-      - 403 Forbidden
       - 500 server error
 - Terminology:
    - Browser: app used to access/navigate HTML docs
@@ -170,9 +167,13 @@ class: text-left
 🍦 Cool Tips, Trends and Resources:
 
 - 📓 [NVM Install Guide](https://www.freecodecamp.org/news/node-version-manager-nvm-install-guide/)
-- ▶️ [Node.js Documentary]
-- ▶️ [10 Things I regret about node.js](https://www.youtube.com/watch?v=M3BM9TB-8yA)
-
+- ▶️ [Node.js Documentary](https://www.youtube.com/watch?v=LB8KwiiUGy0)
+- ▶️ [Node Inventor talk: 10 years later](https://www.youtube.com/watch?v=M3BM9TB-8yA)
+- 🙏 [HTTP request methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods)
+- 📔 [Backend definition](https://techterms.com/definition/backend)
+- 🏗️ [Back-End Web Architecture](https://www.codecademy.com/article/back-end-architecture)
+- 🪵 [Front-End vs Back-End](https://blog.teamtreehouse.com/i-dont-speak-your-language-frontend-vs-backend)
+- 🛞 [Choose an open source license](https://choosealicense.com/)
 <br>
 <hr>
 <br>
