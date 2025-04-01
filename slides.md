@@ -249,5 +249,5 @@ transition: slide-left
 # Homework
 
 - Goto: https://www.freecodecamp.org/learn/back-end-development-and-apis/
-- Start Freecodecamp "Managing Packages with NPM" followed by "Basic Node and Express"
+- Start Freecodecamp "Managing Packages with NPM" 
 - Continue as far as you can
