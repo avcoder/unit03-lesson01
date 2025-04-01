@@ -248,6 +248,5 @@ transition: slide-left
 
 # Homework
 
-- Goto: https://www.freecodecamp.org/learn/back-end-development-and-apis/
-- Start Freecodecamp "Managing Packages with NPM" 
-- Continue as far as you can
+- Learn shell commands by playing: https://web.mit.edu/mprat/Public/web/Terminus/Web/main.html
+- Start Freecodecamp ["Managing Packages with NPM"](https://www.freecodecamp.org/learn/back-end-development-and-apis/)
